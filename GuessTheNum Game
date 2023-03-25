@@ -1,0 +1,38 @@
+import random
+
+max_num = input("type a maximum limit number : ")
+
+if max_num.isdigit():
+    max_num = int(max_num)
+
+    if int(max_num) == 0:
+        print("Type a number not 0...")
+else:
+    print("Type a number : ")
+    quit()
+
+# Problem - the maxnum is always the number generated... not anything number from 0 to max number (SOLVED)
+
+r = random.randrange(0,max_num)            
+
+guess = 0
+while True:
+    guess += 1
+    ugues = input("MAKE A GUESS : ")
+    if ugues.isdigit():
+        ugues = int(ugues)
+    else:
+        print("Please type a Number")
+        continue
+
+    if ugues == r:
+        print("you got it right.!")
+        break
+    else:
+        if ugues > r:
+            print(" - GO LOWER - ")
+        else:
+            print(" + GO HIGHER + ")
+
+print("YOU GOT CORRECT ANSWER IN "+ str(guess), "GUESSES")
+print('Thankyou for playing')
