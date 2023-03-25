@@ -6,7 +6,7 @@ lap_win = 0
 options = ["rock", "paper", "scissor"]
 
 while True:
-    user_input = input("TYPE rock, paper, scissor TO PLAY. TO QUIT = q."    ).lower()
+    user_input = input("TYPE rock, paper, scissor TO PLAY. TO QUIT = q.").lower()
     if user_input == "q":
         break
 
