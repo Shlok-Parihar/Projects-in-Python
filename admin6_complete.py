@@ -76,7 +76,7 @@ except Exception as e:
 
 
 # Title with large font and in bold
-title_font = tkFont.Font(family="Helvetica", size=62, weight="bold")  # Adjust font as needed
+title_font = tkFont.Font(family="Helvetica", size=62, weight="bold")  # Adjust font
 title_label = tk.Label(root, text="Sunshine Autos", font=title_font)
 title_label.place(x=265, y=50)  # Add padding below the title
 
@@ -306,7 +306,7 @@ def display_cars_from_db():
                 bg='green',
                 fg='White',
                 font=head_font,
-                command=lambda v=car['Cars_VIN']: updt_btn(v)  # Pass the car_vin here
+                command=lambda v=car['Cars_VIN']: updt_btn(v)  # Pass the car_vin here, use lambda function or else it doesnt work
             )
             updt_button.grid(row=index, column=5, sticky="ew", padx=5, pady=5)
 
